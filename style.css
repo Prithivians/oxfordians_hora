@@ -1,0 +1,1062 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding: var(--scroll-padding, 3.5rem);
+}
+
+
+/*Scrollbar*/
+body::-webkit-scrollbar {
+    width: 0.2em;
+    background-color: #111;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+
+/*Scrollbar for search result*/
+.search-results::-webkit-scrollbar {
+    width: 8px;
+}
+
+.search-results::-webkit-scrollbar-track {
+    background: #1d1616;
+}
+
+.search-results::-webkit-scrollbar-thumb {
+    background-color: #3d3131;
+    border-radius: 4px;
+}
+
+.search-results::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* Nav Bar */
+header {
+    background: linear-gradient(to bottom, #0f0c0c, #000000);
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+
+/* Hamburger */
+.burger {
+    padding-top: 5px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+    color: wheat;
+    font-size: 30px;
+}
+
+
+.seperator {
+    position: absolute;
+    margin-left: 35px;
+    color: wheat;
+    font-size: 28px;
+    opacity: 0.6;
+    padding-top: 6px;
+}
+
+
+
+
+/* Logo */
+.llogo {
+    display: flex;
+    align-items: center;
+    padding-left: 66px;
+}
+
+.logo {
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 50px;
+    height: 35px;
+    width: 35px;
+    transition: ease-in-out 3s;
+}
+
+.logo:hover {
+    border: 2px solid #395272;
+}
+
+.logomobile {
+    display: none;
+}
+
+
+
+.h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    margin: 0;
+    margin-left: 10px;
+    transition: ease 1s;
+    color: wheat;
+}
+
+.h1:hover {
+    color: rgb(29, 214, 115);
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+
+/* pfp */
+.profile {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    margin-top: 4.7px;
+    z-index: 1;
+}
+
+.userinfoo{
+    color: wheat;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Construcion */
+.menusbackground {
+    position: absolute;
+    height: 99.8vh;
+    width: 300px;
+    background: linear-gradient(to bottom, rgb(37, 37, 37), rgb(15, 15, 15));
+    top: 4px;
+    left: 0;
+    border: transparent;
+    border-radius: 8px;
+    z-index: 1;
+    display: none;
+}
+
+.llogoformenus {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-left: 32px;
+    margin-top: 12px;
+}
+
+.lineformenus{
+    background-color: rgb(255, 255, 255);
+    opacity: 0.12;
+    height: 2px;
+    width: 250px;
+    margin: auto;
+    margin-top: 16px;
+}
+
+.canclemenus {
+    position: absolute;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    color: white;
+    opacity: .7;
+    transition: ease 1s;
+    top: 19.4px;
+    margin-left: 245px;
+}
+
+.canclemenus:hover {
+    opacity: 1;
+    color: rgb(165, 67, 67);
+}
+
+
+
+
+
+
+
+/* Tooltip */
+
+.tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    right: 10px;
+    margin-left: -60px;
+}
+
+.tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 75%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.profile:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+
+/* Profil Card Priview */
+.profileinfo {
+    position: absolute;
+    height: 450px;
+    width: 300px;
+    background: linear-gradient(to bottom, rgb(49, 49, 49), rgb(32, 32, 32));
+    top: 10px;
+    right: 0;
+    border: transparent;
+    border-radius: 8px;
+    display: none;
+}
+
+.profileinfobhitra {
+    background-color: rgb(27, 27, 27);
+    background: linear-gradient(to bottom, rgb(27, 27, 27), rgb(14, 13, 13));
+    height: 373px;
+    width: 288px;
+    max-width: 91%;
+    margin: auto;
+    margin-top: 62px;
+    border: transparent;
+    border-radius: 10px;
+    box-shadow: 4px 2px 10px 4px rgba(0, 0, 0, 0.5);
+}
+
+.profileinfobhitra .p1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    padding-top: 10px;
+    margin: 10px 16px;
+}
+
+
+
+.profileinfobhitra .p11 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+    padding-top: 10px;
+    margin: 8px 16px;
+}
+
+.profileinfobhitra .p2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    margin: 10px 18px;
+    opacity: .8;
+}
+
+
+.line3 {
+    background-color: rgb(212, 207, 207);
+    opacity: 0.1;
+    height: 2px;
+    width: 250px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+
+/* Profile Cancle Button */
+.cancle {
+    position: absolute;
+    cursor: pointer;
+    margin: 18px 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    opacity: .7;
+    transition: ease 1s;
+}
+
+.cancle:hover {
+    opacity: 1;
+    color: rgb(197, 51, 51);
+}
+
+
+
+/* Socials */
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: .6rem 0 3rem 0;
+}
+
+.socials li {
+    margin: 8px 25px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.socials a i {
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+
+.socials a:hover i {
+    color: aqua;
+}
+
+.linki {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* nav-options */
+nav {
+    margin-top: 20px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    flex: 1;
+    text-align: left;
+}
+
+.lii {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: wheat;
+    font-weight: 500;
+    font-size: 20px;
+    padding-left: 40px;
+}
+
+nav a {
+    color: #fff;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #444;
+    color: white;
+}
+
+
+
+
+
+
+
+
+/* Contents */
+
+.vdobackpages {
+    height: 70vh;
+}
+
+/* Background vdo */
+.back-video {
+    position: absolute;
+    top: -100px;
+    right: 0;
+    z-index: -1;
+}
+
+
+
+
+@media(min-aspect-ratio: 16/9) {
+    .back-video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media(max-aspect-ratio: 16/9) {
+    .back-video {
+        top: 38px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/* Typing Text Animation */
+.wrapper {
+    padding-top: 30vh;
+    display: grid;
+    place-items: center;
+    color: wheat;
+    margin-bottom: 180px;
+}
+
+.typing-demo {
+    width: 30ch;
+    animation: typing 5s steps(30) infinite, blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2.5em;
+}
+
+.typing-demo a {
+    text-decoration: none;
+    color: wheat;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+
+
+
+
+/* Java Script ko for menus */
+@keyframes slide-in {
+    from {
+        transform: translateX(-12%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-out {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+
+/* FOR profileshow ig */
+@keyframes slides-in {
+    from {
+        transform: translateY(-10%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slides-out {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+
+
+
+/* About*/
+.chej{
+    background: linear-gradient(to bottom, #130e0e, #000000);
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1;
+    height: 22vh;
+    box-shadow: 0 -2px 2px #181111;
+}
+
+.h1clg{
+    font-size: 22px;
+    font-weight: 300;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: wheat;   
+    padding: 4px;
+    padding-top: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: ease 1s;
+}
+
+.h1clg:hover {
+    color: rgb(29, 214, 115);
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+.pclg{
+    font-size: 14px;
+    font-weight: 300;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(199, 185, 158);   
+    padding: 18px;
+    text-align: center;
+}
+
+.floating{
+    position: absolute;
+    background-color: #395272;
+    width: 90%;
+    max-width: 680px;
+    padding: 10px;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    z-index: 1;
+    border-radius: 20px;
+    box-shadow: 0 -2px 2px #395272;
+}
+
+
+
+/* Year Book */
+.yrbooknav {
+    background: linear-gradient(to bottom, #000000, #0f0c0c);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 1;
+    align-items: center;
+}
+
+.icon {
+    color: black;
+}
+
+
+
+
+
+
+
+/* Searchbar */
+.search {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.searchBar {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 10px;
+    z-index: 1;
+    flex-wrap: wrap;
+}
+
+#searchQueryInput {
+    height: 2.3rem;
+    background: #f5f5f5;
+    outline: none;
+    border: none;
+    border-radius: 1.325rem;
+    padding: 0 2.6rem 0 1rem;
+    font-size: 1rem;
+    align-items: center;
+}
+
+#searchQuerySubmit {
+    right: 20px;
+    position: absolute;
+    width: 1.5rem;
+    height: 1.8rem;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+
+/* Search results options initially not shown */
+.list {
+    position: absolute;
+    right: 6.4em;
+    display: none;
+}
+
+.list li {
+    list-style: none;
+    padding: 4px;
+}
+
+.list li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+/* Search results lmao */
+
+.search-results {
+    left: 69.3em;
+    max-height: 20px;
+    overflow-y: scroll;
+    display: none;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-top: none;
+    cursor: pointer;
+}
+
+
+
+.search-results li {
+    list-style: none;
+    flex: 1;
+    text-align: left;
+}
+
+.search-results li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 2px 10px;
+}
+
+.search-results li a:hover {
+    background-color: #444;
+    color: white;
+}
+
+
+
+
+/* Year Book Contents */
+.h1la {
+    font-size: 24px;
+    font-weight: 300;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: wheat;
+    margin: 20px;
+    margin-left: 2px;
+    padding-left: 4px;
+    cursor: pointer;
+}
+
+.yearbook {
+    background: linear-gradient(to bottom, #0f0c0c, #080404);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.yearbook2 {
+    background: linear-gradient(to bottom, #080404, #130e0e);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.yearbook3 {
+    background: linear-gradient(to bottom, #130e0e, #080404);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-section {
+    padding: 60px;
+}
+
+
+
+
+.llogoformenusss {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-left: 22px;
+    margin-top: 12px;
+}
+
+.logooo {
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    transition: ease-in-out 3s;
+}
+
+.image3 {
+    width: 150px;
+    height: 150px;
+    border-radius: 5%;
+    transition: ease-in-out 1.01s;
+    margin-bottom: 4px;
+}
+
+.image3:hover {
+    filter: brightness(80%);
+}
+
+.member-name {
+    font-size: 20px;
+    font-weight: 200;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: wheat;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.voiceofearthians {
+    font-size: 16px;
+    color: gray;
+    text-align: center;
+    max-width: 200px;
+    margin-top: 10px;
+}
+
+/* Image Cards Options */
+.card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardoption {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 10px;
+    color: white;
+    opacity: 0;
+    transition: all .5s;
+}
+
+.card:hover .cardoption {
+    display: block;
+    opacity: 1;
+}
+
+.cardsocials {
+    list-style: none;
+    display: flex;
+}
+
+.cardsocials li {
+    margin: 0 10px;
+}
+
+.cardsocials a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.cardsocials a i {
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+
+.cardsocials a:hover i {
+    color: aqua;
+}
+
+
+
+
+/* Mobile Devices */
+@media only screen and (max-width: 767px) {
+    /* 383 */
+
+    .logo {
+        height: 31px;
+        width: 31px;
+    }
+
+    .logomobile {
+        display: block;
+    }
+
+    .profile img:not(.logomobile) {
+        display: none;
+    }
+    .userinfoo{
+        display: none;
+    }
+    .profile {
+        position: absolute;
+        left: 0;
+        margin-left: 23px;
+    }
+
+    .seperator {
+        display: none;
+    }
+
+
+    .llogo {
+        padding-left: 0;
+        margin-top: 4px;
+    }
+
+    .h1 {
+        margin-left: 52px;
+        font-size: 20px;
+    }
+
+    .lii {
+        font-weight: 300;
+        font-size: 18px;
+    }
+
+
+
+    .logo1 {
+        display: none;
+    }
+
+    .burger {
+        right: 0;
+        margin-right: 22px;
+    }
+
+    .line {
+        width: 25px;
+        height: 2px;
+        margin: 5px 3px;
+    }
+
+    .name {
+        display: none;
+    }
+
+    /* Menus */
+    .llogoformenus {
+        padding-left: 14px;
+        margin-top: 16px;
+    }
+
+    .lineformenus {
+        width: 266px;
+        margin-top: 16px;
+        opacity: 0.52;
+    }
+
+    .canclemenus {
+        top: 14.5px;
+        margin-left: 250px;
+    }
+
+    .vdobackpages {
+        height: 20vh;
+    }
+
+    /* Typing Text Animation */
+
+    .wrapper {
+        padding-top: 9vh;
+    }
+
+    .typing-demo {
+        font-size: 1.2em;
+    }
+
+    .tooltiptext {
+        display: none;
+    }
+
+
+    /* Yearbook */
+
+    .chej{
+        z-index: 1;
+        height: 8vh;
+    }
+
+    .h1clg{
+        font-size: 15px;
+        color: wheat;   
+        padding: 2px;
+    }
+    
+    .pclg{
+        display: none;
+    }
+
+    .floating{
+        width: 80%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+    }
+
+
+    .contact-section {
+        padding: 70px;
+    }
+
+    .h1la {
+        font-size: 20px;
+        padding-left: 6px;
+        font-weight: 400;
+    }
+
+    .yearbook {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .yearbook2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .yearbook3 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .member-name {
+        font-size: 20px;
+        font-weight: 300;
+    }
+    
+    .voiceofearthians {
+        font-size: 14px;
+    }
+
+    
+    /* Searchbox */
+    .search {
+        font-size: 1.3em;
+    }
+
+    #searchQueryInput {
+        width: 7.8rem;
+        height: 1.8rem;
+        border-radius: 1.225rem;
+        padding: 2.2px 0.8rem 0;
+        font-size: 1rem;
+    }
+
+    #searchQuerySubmit {
+        width: 1.8rem;
+        height: 1.8rem;
+        right: 12px;
+        background-color: #fff;
+        border-radius: 500px;
+    }
+
+    .searchBar {
+        margin-right: 10px;
+        margin-top: 8px;
+    }
+
+    #search-results {
+        left: 16em;
+        right: 0;
+    }
+
+}
+
+
+
+
+
+
+/* Useless but cool ig */
+@media only screen and (max-width: 1000px) {
+    .name {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .profileinfo {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 243px) {
+    header {
+        padding: 24px;
+    }
+
+    .h1 {
+        display: none;
+    }
+}
